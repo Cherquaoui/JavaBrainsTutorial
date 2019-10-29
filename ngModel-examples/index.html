@@ -7,6 +7,9 @@
     <title>ngModel</title>
 </head>
 <body ng-controller="Ctrl">
-{{mytext}}
+<input type="text" ng-model="mytext">
+<input type="checkbox" ng-change="textboxChange()" ng-model="mycheckbox"/>
+<div>text : {{mytext}}</div>
+<div>checkbox : {{mycheckbox}}</div>
 </body>
 </html>

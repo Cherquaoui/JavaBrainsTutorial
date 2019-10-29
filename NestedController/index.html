@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nestedController">
+<head>
+    <meta charset="UTF-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <title>NestedController</title>
+</head>
+<body>
+<div ng-controller="Ctrl1">
+    {{test}}
+    <div ng-controller="Ctrl2">
+        {{test}}
+    </div>
+</div>
+
+</body>
+</html>
