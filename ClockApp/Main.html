@@ -7,7 +7,8 @@
     <title>Title</title>
 </head>
     <body ng-controller="MainCtrl">
-        <p>the current date is {{myDate}}</p>
+        <input ng-model="userName" type="text"/>
+        <p>the username is : {{userName}}, the current date is {{myDate}}</p>
         <button ng-click="updateDate()">Refresh</button>
     </body>
 </html>
