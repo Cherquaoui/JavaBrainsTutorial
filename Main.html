@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="angular.js"></script>
+    <title>Title</title>
+</head>
+<body ng-controller="MainCtrl">
+<p>the current date is {{myDate}}</p>
+<button ng-click="Main($rootScope)">Refresh</button>
+</body>
+<script>
+    var module = angular.module("myApp",[]);
+    module.controller("MainCtrl",Main);
+    function Main($scope) {
+        var date = new Date();
+        $scope.myDate = date.getMilliseconds();
+        console.log("main called")
+    }
+</script>
+</html>
