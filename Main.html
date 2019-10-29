@@ -7,7 +7,7 @@
 </head>
 <body ng-controller="MainCtrl">
 <p>the current date is {{myDate}}</p>
-<button ng-click="Main($rootScope)">Refresh</button>
+<button ng-click="updateDate()">Refresh</button>
 </body>
 <script>
     var module = angular.module("myApp",[]);
@@ -15,7 +15,12 @@
     function Main($scope) {
         var date = new Date();
         $scope.myDate = date.getMilliseconds();
-        console.log("main called")
+        $scope.updateDate = function(){
+            console.log("updating date ...");
+            date = new Date();
+            $scope.myDate = date.getMilliseconds();
+        }
+
     }
 </script>
 </html>
